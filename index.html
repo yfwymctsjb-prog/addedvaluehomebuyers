@@ -1,0 +1,835 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sell My House Fast in Houston, TX — As-Is, No Fees | Added Value Investments</title>
+  <meta name="description" content="Sell your Houston house as-is for cash. No repairs, no showings, no agent fees. Free offer in about 10 minutes. Call (281) 504-7854 — open 7 days a week." />
+  <meta name="robots" content="index,follow" />
+  <meta name="theme-color" content="#0b1220" />
+  <meta property="og:title" content="Sell My House Fast in Houston, TX | Added Value Investments" />
+  <meta property="og:description" content="Your house. Our problem. Your fresh start. Sell as-is, skip the repairs, move forward on your terms. Free offer in about 10 minutes." />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="en_US" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Sell My House Fast in Houston, TX | Added Value Investments" />
+  <meta name="twitter:description" content="Sell your house as-is. Skip the repairs. Free offer in about 10 minutes. (281) 504-7854." />
+  <link rel="canonical" href="https://addedvalueinvestmentsllc.com/" />
+  <link rel="icon" type="image/png" href="assets/avi-logo.png" />
+  <link rel="preconnect" href="https://api.fontshare.com" crossorigin />
+  <link href="https://api.fontshare.com/v2/css?f[]=general-sans@400,500,600,700&display=swap" rel="stylesheet" />
+  <link href="https://api.fontshare.com/v2/css?f[]=zodiak@400,500,700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --navy-0: #080c15;
+      --navy-1: #0b1220;
+      --navy-2: #101a2e;
+      --navy-3: #16223c;
+      --gold: #c5a878;
+      --gold-bright: #e0c08d;
+      --gold-deep: #a8894f;
+      --ink: #f4f1ea;
+      --ink-muted: #a9b0be;
+      --ink-faint: #6f7787;
+      --on-gold: #1a1408;
+      --radius-md: 0.75rem;
+      --radius-lg: 1.1rem;
+      --radius-full: 999px;
+      --shadow-md: 0 14px 38px rgba(2, 5, 12, 0.5);
+      --shadow-lg: 0 26px 64px rgba(2, 5, 12, 0.6);
+      --font-body: 'General Sans', 'Segoe UI', sans-serif;
+      --font-serif: 'Zodiak', Georgia, serif;
+      --content: 1160px;
+      --ease: cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+    body {
+      min-height: 100vh;
+      background: var(--navy-1);
+      color: var(--ink);
+      font-family: var(--font-body);
+      font-size: 1.0625rem;
+      line-height: 1.65;
+      overflow-x: hidden;
+    }
+    img { display: block; max-width: 100%; }
+    a { color: inherit; text-decoration: none; }
+    button, input, textarea, select { font: inherit; }
+    button { border: 0; cursor: pointer; }
+    :focus-visible { outline: 2px solid var(--gold-bright); outline-offset: 3px; border-radius: 4px; }
+    .skip-link {
+      position: absolute; left: -999px; top: 0.75rem; z-index: 200;
+      background: var(--gold); color: var(--on-gold);
+      padding: 0.6rem 1.1rem; border-radius: var(--radius-full); font-weight: 600;
+    }
+    .skip-link:focus { left: 0.75rem; }
+    .container { width: min(calc(100% - 2.5rem), var(--content)); margin-inline: auto; }
+
+    /* ---------- Ticker ---------- */
+    .ticker {
+      background: var(--gold); color: var(--on-gold);
+      overflow: hidden; white-space: nowrap;
+      font-size: 0.85rem; font-weight: 600; letter-spacing: 0.02em;
+      -webkit-mask-image: linear-gradient(90deg, transparent, #000 4%, #000 96%, transparent);
+      mask-image: linear-gradient(90deg, transparent, #000 4%, #000 96%, transparent);
+    }
+    .ticker-track { display: inline-flex; gap: 0; padding: 0.55rem 0; will-change: transform; }
+    .ticker span { display: inline-flex; align-items: center; gap: 1.4rem; padding-right: 1.4rem; }
+    .ticker .dot { width: 5px; height: 5px; border-radius: 50%; background: var(--on-gold); opacity: 0.55; flex-shrink: 0; }
+    @keyframes ticker-scroll { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+    .ticker-track { animation: ticker-scroll 38s linear infinite; }
+
+    /* ---------- Header ---------- */
+    .site-header {
+      position: sticky; top: 0; z-index: 100;
+      background: color-mix(in srgb, var(--navy-1) 86%, transparent);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid rgba(197, 168, 120, 0.14);
+    }
+    .header-inner { display: flex; align-items: center; justify-content: space-between; gap: 1rem; min-height: 5.25rem; }
+    .brand { display: inline-flex; align-items: center; gap: 0.9rem; }
+    .brand img { height: 2.6rem; width: auto; }
+    .call-chip {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      border: 1px solid rgba(197, 168, 120, 0.3); color: var(--ink);
+      border-radius: var(--radius-full); padding: 0.55rem 1.1rem;
+      font-size: 0.9rem; font-weight: 600; min-height: 44px;
+      transition: border-color 180ms var(--ease), color 180ms var(--ease);
+    }
+    .call-chip svg { flex-shrink: 0; color: var(--gold); }
+    .call-chip:hover { border-color: var(--gold); color: var(--gold-bright); }
+    .num-alt { display: none; }
+
+    /* ---------- Buttons ---------- */
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center; gap: 0.55rem;
+      min-height: 52px; padding: 0.95rem 1.6rem;
+      border-radius: var(--radius-full); font-weight: 700; font-size: 1rem;
+      transition: transform 180ms var(--ease), background 180ms var(--ease), box-shadow 180ms var(--ease), border-color 180ms var(--ease);
+    }
+    .btn:hover { transform: translateY(-2px); }
+    .btn-gold { background: var(--gold); color: var(--on-gold); box-shadow: 0 8px 26px rgba(197, 168, 120, 0.28); }
+    .btn-gold:hover { background: var(--gold-bright); box-shadow: 0 12px 32px rgba(224, 192, 141, 0.4); }
+    .btn-outline { border: 1px solid rgba(244, 241, 234, 0.28); color: var(--ink); }
+    .btn-outline:hover { border-color: var(--gold); color: var(--gold-bright); }
+    .btn-sm { min-height: 44px; padding: 0.6rem 1.25rem; font-size: 0.9rem; }
+
+    /* ---------- Hero ---------- */
+    .hero { position: relative; }
+    .hero-bg { position: absolute; inset: 0; z-index: -1; }
+    .hero-bg img { width: 100%; height: 100%; object-fit: cover; }
+    .hero-bg::after {
+      content: ""; position: absolute; inset: 0;
+      background:
+        linear-gradient(180deg, rgba(8, 12, 21, 0.86) 0%, rgba(11, 18, 32, 0.78) 45%, var(--navy-1) 100%),
+        radial-gradient(ellipse at 70% 20%, rgba(197, 168, 120, 0.12), transparent 55%);
+    }
+    .hero-inner { display: grid; gap: 3rem; padding: 4.5rem 0 5.5rem; align-items: center; }
+    .eyebrow {
+      display: inline-flex; align-items: center; gap: 0.6rem;
+      color: var(--gold-bright); font-size: 0.82rem; font-weight: 700;
+      letter-spacing: 0.14em; text-transform: uppercase;
+    }
+    .eyebrow::before { content: ""; width: 2rem; height: 1px; background: var(--gold); }
+    .hero h1 {
+      font-family: var(--font-serif);
+      font-size: clamp(2.6rem, 5.6vw, 4.6rem);
+      line-height: 1.08; letter-spacing: -0.01em;
+      margin-top: 1.1rem; max-width: 14ch;
+    }
+    .hero h1 em { font-style: normal; color: var(--gold-bright); }
+    .hero-sub { font-size: clamp(1.1rem, 1.6vw, 1.35rem); color: var(--ink); font-weight: 500; margin-top: 1.4rem; max-width: 34ch; }
+    .hero-body { color: var(--ink-muted); margin-top: 1.1rem; max-width: 52ch; }
+    .hero-ctas { display: flex; flex-wrap: wrap; gap: 0.9rem; margin-top: 2rem; }
+    .hero-trust {
+      display: flex; flex-wrap: wrap; gap: 0.4rem 1.6rem;
+      margin-top: 1.9rem; list-style: none;
+      color: var(--ink-muted); font-size: 0.95rem;
+    }
+    .hero-trust li { display: flex; align-items: center; gap: 0.5rem; }
+    .hero-trust svg { color: var(--gold); flex-shrink: 0; }
+
+    /* ---------- Form ---------- */
+    .offer-card {
+      background: color-mix(in srgb, var(--navy-2) 88%, transparent);
+      border: 1px solid rgba(197, 168, 120, 0.22);
+      border-radius: 1.4rem; padding: 2rem;
+      box-shadow: var(--shadow-lg);
+      backdrop-filter: blur(14px);
+      scroll-margin-top: 6.5rem;
+    }
+    .offer-card h2 { font-size: 1.45rem; line-height: 1.2; }
+    .offer-card > p { color: var(--ink-muted); font-size: 0.95rem; margin-top: 0.5rem; }
+    .form-grid { display: grid; gap: 1.1rem; margin-top: 1.5rem; }
+    label { display: grid; gap: 0.45rem; font-size: 0.9rem; font-weight: 600; }
+    input, textarea, select {
+      width: 100%; border-radius: var(--radius-md);
+      border: 1px solid rgba(169, 176, 190, 0.22);
+      background: var(--navy-1); color: var(--ink);
+      min-height: 3.2rem; padding: 0.8rem 1rem;
+      transition: border-color 180ms var(--ease), box-shadow 180ms var(--ease);
+    }
+    select { appearance: none; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='9' viewBox='0 0 14 9'%3E%3Cpath d='M1 1l6 6 6-6' stroke='%23c5a878' stroke-width='2' fill='none' stroke-linecap='round'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 1rem center; padding-right: 2.6rem; }
+    textarea { min-height: 6rem; resize: vertical; }
+    input:focus, textarea:focus, select:focus { border-color: var(--gold); box-shadow: 0 0 0 3px rgba(197, 168, 120, 0.18); outline: none; }
+    input::placeholder, textarea::placeholder { color: var(--ink-faint); }
+    .form-note { color: var(--ink-muted); font-size: 0.82rem; }
+    .form-success {
+      display: none; text-align: center; padding: 2.2rem 0.5rem;
+    }
+    .form-success .check {
+      width: 4rem; height: 4rem; margin: 0 auto 1.2rem; border-radius: 50%;
+      background: rgba(197, 168, 120, 0.14); display: grid; place-items: center; color: var(--gold-bright);
+    }
+    .form-success h3 { font-size: 1.3rem; }
+    .form-success p { color: var(--ink-muted); margin-top: 0.5rem; font-size: 0.95rem; }
+
+    /* ---------- Sections ---------- */
+    .section { padding: clamp(4rem, 8vw, 7rem) 0; scroll-margin-top: 5.5rem; }
+    .section-head { max-width: 46rem; margin-bottom: 3rem; }
+    .section-head h2 {
+      font-family: var(--font-serif);
+      font-size: clamp(1.9rem, 3.6vw, 3rem); line-height: 1.12;
+      margin-top: 1rem; letter-spacing: -0.01em;
+    }
+    .section-head h2 em { font-style: normal; color: var(--gold-bright); }
+    .section-head p { color: var(--ink-muted); margin-top: 1rem; font-size: 1.05rem; }
+    .grid-4 { display: grid; gap: 1.2rem; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); }
+    .card {
+      background: var(--navy-2); border: 1px solid rgba(244, 241, 234, 0.07);
+      border-radius: var(--radius-lg); padding: 1.8rem;
+      transition: transform 220ms var(--ease), border-color 220ms var(--ease);
+    }
+    .card:hover { transform: translateY(-5px); border-color: rgba(197, 168, 120, 0.35); }
+    .card h3 { font-size: 1.12rem; margin-bottom: 0.55rem; }
+    .card p { color: var(--ink-muted); font-size: 0.95rem; }
+    .card .ico {
+      width: 2.7rem; height: 2.7rem; border-radius: var(--radius-md);
+      background: rgba(197, 168, 120, 0.12); color: var(--gold-bright);
+      display: grid; place-items: center; margin-bottom: 1.1rem;
+    }
+
+    /* ---------- Situations ---------- */
+    .situations { background: var(--navy-0); border-block: 1px solid rgba(244, 241, 234, 0.06); }
+    .chip-grid { display: grid; gap: 0.8rem; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); }
+    .chip {
+      display: flex; align-items: center; gap: 0.8rem;
+      background: var(--navy-2); border: 1px solid rgba(244, 241, 234, 0.07);
+      border-radius: var(--radius-md); padding: 1rem 1.2rem;
+      font-size: 0.95rem; font-weight: 500;
+      transition: border-color 200ms var(--ease), transform 200ms var(--ease);
+    }
+    .chip:hover { border-color: rgba(197, 168, 120, 0.4); transform: translateY(-3px); }
+    .chip svg { color: var(--gold); flex-shrink: 0; }
+
+    /* ---------- Statement ---------- */
+    .statement { text-align: center; padding: clamp(5rem, 10vw, 8.5rem) 0; }
+    .statement p.kicker { color: var(--ink-faint); letter-spacing: 0.2em; text-transform: uppercase; font-size: 0.8rem; font-weight: 600; }
+    .statement h2 {
+      font-family: var(--font-serif); font-weight: 500;
+      font-size: clamp(2.4rem, 6vw, 4.8rem); line-height: 1.12;
+      max-width: 18ch; margin: 1.4rem auto 0;
+    }
+    .statement h2 .fill { color: var(--ink-muted); transition: color 500ms var(--ease); }
+    .statement h2 .fill.on { color: var(--gold-bright); }
+    .statement p.outcome { color: var(--ink-muted); max-width: 52ch; margin: 1.6rem auto 0; font-size: 1.1rem; }
+
+    /* ---------- Steps ---------- */
+    .steps { display: grid; gap: 1.2rem; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); counter-reset: step; }
+    .step { position: relative; padding-top: 1.2rem; }
+    .step::before {
+      counter-increment: step; content: "0" counter(step);
+      font-family: var(--font-serif); font-size: 2.8rem; color: var(--gold);
+      opacity: 0.85; display: block; line-height: 1; margin-bottom: 0.9rem;
+    }
+    .step::after {
+      content: ""; position: absolute; top: 0; left: 0; right: 0; height: 1px;
+      background: linear-gradient(90deg, var(--gold), transparent 65%);
+    }
+    .step h3 { font-size: 1.15rem; margin-bottom: 0.5rem; }
+    .step p { color: var(--ink-muted); font-size: 0.95rem; }
+
+    /* ---------- Bonus band ---------- */
+    .bonus {
+      background: var(--gold); color: var(--on-gold);
+      text-align: center; padding: clamp(3.5rem, 7vw, 5.5rem) 0;
+    }
+    .bonus h2 { font-family: var(--font-serif); font-size: clamp(1.8rem, 3.6vw, 2.9rem); line-height: 1.15; max-width: 22ch; margin-inline: auto; }
+    .bonus p { margin-top: 1rem; font-weight: 600; max-width: 46ch; margin-inline: auto; }
+    .bonus .btn { margin-top: 2rem; background: var(--navy-1); color: var(--gold-bright); box-shadow: 0 10px 30px rgba(8, 12, 21, 0.35); }
+    .bonus .btn:hover { background: var(--navy-0); }
+
+    /* ---------- Testimonials ---------- */
+    .quotes { display: grid; gap: 1.2rem; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
+    .quote {
+      background: var(--navy-2); border: 1px solid rgba(244, 241, 234, 0.07);
+      border-radius: var(--radius-lg); padding: 2rem;
+      display: flex; flex-direction: column; gap: 1.2rem;
+      transition: transform 220ms var(--ease), border-color 220ms var(--ease);
+    }
+    .quote:hover { transform: translateY(-5px); border-color: rgba(197, 168, 120, 0.35); }
+    .quote .mark { font-family: var(--font-serif); font-size: 3rem; line-height: 0.5; color: var(--gold); height: 1.2rem; }
+    .quote blockquote { font-size: 1.02rem; flex-grow: 1; }
+    .quote footer { display: flex; align-items: center; gap: 0.8rem; color: var(--ink-muted); font-size: 0.9rem; }
+    .quote footer::before { content: ""; width: 1.6rem; height: 1px; background: var(--gold); }
+
+    /* ---------- Why AVI ---------- */
+    .why-grid { display: grid; gap: 3rem; align-items: center; }
+    .why-photo { position: relative; }
+    .why-photo img { border-radius: var(--radius-lg); box-shadow: var(--shadow-md); aspect-ratio: 4 / 3; object-fit: cover; width: 100%; }
+    .why-photo .tag {
+      position: absolute; left: 1.2rem; bottom: 1.2rem;
+      background: color-mix(in srgb, var(--navy-1) 82%, transparent);
+      border: 1px solid rgba(197, 168, 120, 0.25);
+      backdrop-filter: blur(10px);
+      border-radius: var(--radius-md); padding: 0.8rem 1.1rem;
+      font-size: 0.88rem; max-width: 250px;
+    }
+    .why-photo .tag strong { color: var(--gold-bright); display: block; margin-bottom: 0.15rem; }
+    .why-list { list-style: none; display: grid; gap: 1.1rem; margin-top: 1.6rem; }
+    .why-list li { display: flex; gap: 0.9rem; align-items: flex-start; color: var(--ink-muted); font-size: 0.98rem; }
+    .why-list svg { color: var(--gold); flex-shrink: 0; margin-top: 0.2rem; }
+    .why-list strong { color: var(--ink); }
+
+    /* ---------- FAQ ---------- */
+    .faq { max-width: 46rem; }
+    .faq details { border-bottom: 1px solid rgba(244, 241, 234, 0.09); }
+    .faq summary {
+      list-style: none; cursor: pointer; display: flex; justify-content: space-between; gap: 1rem;
+      align-items: center; padding: 1.35rem 0.25rem; font-weight: 600; font-size: 1.05rem;
+      transition: color 180ms var(--ease);
+    }
+    .faq summary::-webkit-details-marker { display: none; }
+    .faq summary:hover { color: var(--gold-bright); }
+    .faq summary .plus {
+      flex-shrink: 0; width: 1.9rem; height: 1.9rem; border-radius: 50%;
+      border: 1px solid rgba(197, 168, 120, 0.4); color: var(--gold);
+      display: grid; place-items: center; transition: transform 260ms var(--ease), background 260ms var(--ease);
+    }
+    .faq details[open] .plus { transform: rotate(45deg); background: rgba(197, 168, 120, 0.12); }
+    .faq .answer { display: grid; grid-template-rows: 0fr; transition: grid-template-rows 300ms var(--ease); }
+    .faq details[open] .answer { grid-template-rows: 1fr; }
+    .faq .answer > div { overflow: hidden; }
+    .faq .answer p { color: var(--ink-muted); padding: 0 0.25rem 1.4rem; font-size: 0.98rem; max-width: 58ch; }
+
+    /* ---------- Final CTA ---------- */
+    .final {
+      position: relative; text-align: center;
+      padding: clamp(4.5rem, 9vw, 7.5rem) 0;
+      background:
+        radial-gradient(ellipse at 50% 110%, rgba(197, 168, 120, 0.14), transparent 60%),
+        var(--navy-0);
+      border-top: 1px solid rgba(244, 241, 234, 0.06);
+    }
+    .final h2 {
+      font-family: var(--font-serif);
+      font-size: clamp(2.1rem, 4.6vw, 3.6rem); line-height: 1.12; max-width: 16ch; margin: 1.2rem auto 0;
+    }
+    .final h2 em { font-style: normal; color: var(--gold-bright); }
+    .final p { color: var(--ink-muted); max-width: 50ch; margin: 1.3rem auto 0; }
+    .final .hero-ctas { justify-content: center; }
+    .final .phone-line { margin-top: 1.6rem; color: var(--ink-muted); font-size: 0.95rem; }
+
+    /* ---------- Footer ---------- */
+    .footer { border-top: 1px solid rgba(244, 241, 234, 0.08); padding: 3.5rem 0 7rem; background: var(--navy-0); }
+    .footer-grid { display: grid; gap: 2.5rem; }
+    .footer img.logo-foot { height: 2.4rem; width: auto; }
+    .footer p { color: var(--ink-muted); font-size: 0.92rem; margin-top: 1.1rem; max-width: 60ch; }
+    .footer .links { display: grid; gap: 0.6rem; font-size: 0.95rem; }
+    .footer .links a { color: var(--ink-muted); transition: color 180ms var(--ease); }
+    .footer .links a:hover { color: var(--gold-bright); }
+    .footer .disclaimer { color: var(--ink-faint); font-size: 0.8rem; margin-top: 2.2rem; max-width: 90ch; line-height: 1.55; }
+
+    /* ---------- Sticky mobile CTA ---------- */
+    .sticky-cta {
+      position: fixed; left: 0.75rem; right: 0.75rem; bottom: 0.75rem; z-index: 90;
+      display: grid; grid-template-columns: 1fr auto; gap: 0.6rem;
+      background: color-mix(in srgb, var(--navy-2) 92%, transparent);
+      border: 1px solid rgba(197, 168, 120, 0.28);
+      border-radius: var(--radius-lg); padding: 0.65rem;
+      box-shadow: var(--shadow-lg); backdrop-filter: blur(16px);
+      opacity: 0; visibility: hidden; transform: translateY(12px);
+      transition: opacity 280ms var(--ease), visibility 280ms var(--ease), transform 280ms var(--ease);
+    }
+    .sticky-cta.is-visible { opacity: 1; visibility: visible; transform: translateY(0); }
+    .sticky-cta .btn { min-height: 46px; }
+    .sticky-cta .btn-call {
+      background: transparent; border: 1px solid rgba(197, 168, 120, 0.45); color: var(--gold-bright);
+      padding-inline: 1.1rem;
+    }
+    .sticky-cta .btn-call:hover { border-color: var(--gold); }
+
+    /* ---------- Reveal on scroll ---------- */
+    .reveal { opacity: 0; transform: translateY(22px); transition: opacity 650ms var(--ease), transform 650ms var(--ease); }
+    .reveal.is-in { opacity: 1; transform: none; }
+    .reveal.d1 { transition-delay: 90ms; } .reveal.d2 { transition-delay: 180ms; }
+    .reveal.d3 { transition-delay: 270ms; } .reveal.d4 { transition-delay: 360ms; }
+
+    @media (min-width: 940px) {
+      .hero-inner { grid-template-columns: 1.05fr 0.95fr; }
+      .why-grid { grid-template-columns: 0.95fr 1.05fr; }
+      .footer-grid { grid-template-columns: 1.2fr 0.8fr; align-items: start; }
+      .sticky-cta { display: none; }
+    }
+    @media (max-width: 939px) {
+      .header-inner .call-chip .num { display: none; }
+      .header-inner .call-chip .num-alt { display: inline; }
+      .hero-inner { padding-top: 3rem; }
+      .sticky-cta { display: grid; }
+    }
+    @media (max-width: 560px) {
+      .brand img { height: 2.1rem; }
+      .offer-card { padding: 1.5rem; }
+      .hero-ctas .btn { width: 100%; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      .ticker-track { animation: none; }
+      .reveal { opacity: 1; transform: none; transition: none; }
+      .btn:hover, .card:hover, .chip:hover, .quote:hover { transform: none; }
+      .statement h2 .fill { color: var(--gold-bright); transition: none; }
+    }
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Added Value Investments",
+    "description": "Houston-area real estate investment company buying houses as-is for cash. No repairs, no agent fees, no showings.",
+    "areaServed": "Greater Houston, Texas",
+    "telephone": "+1-281-504-7854",
+    "url": "https://addedvalueinvestmentsllc.com/",
+    "openingHours": "Mo-Su",
+    "knowsAbout": ["sell my house Houston", "sell my house fast Houston", "cash home buyer Houston", "sell house as-is", "inherited house Houston"]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "Do I need to make repairs or clean anything first?", "acceptedAnswer": { "@type": "Answer", "text": "No. We buy houses completely as-is. You can leave behind anything you don't want to take with you — no repairs, no cleanup, no prep." } },
+      { "@type": "Question", "name": "How fast can I get an offer?", "acceptedAnswer": { "@type": "Answer", "text": "About 10 minutes. Fill out the short form or call (281) 504-7854 and you'll have a free, no-obligation cash offer fast." } },
+      { "@type": "Question", "name": "How fast can I close?", "acceptedAnswer": { "@type": "Answer", "text": "You pick the closing date. In many cases we can close in as little as 5 days, or we can work on your timeline if you need more time." } },
+      { "@type": "Question", "name": "Are there fees or commissions?", "acceptedAnswer": { "@type": "Answer", "text": "No agent fees or commissions. And for the next 2 homeowners who complete the form, we cover all closing costs — saving you thousands." } },
+      { "@type": "Question", "name": "Am I obligated if I request an offer?", "acceptedAnswer": { "@type": "Answer", "text": "No. The offer is free and there's zero obligation. If it's not right for you, no hard feelings — we'll never pressure you." } },
+      { "@type": "Question", "name": "What if I'm not ready to sell yet?", "acceptedAnswer": { "@type": "Answer", "text": "That's completely fine. We're happy to answer questions and stay in touch until you're ready. No pressure, ever." } }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- Ticker -->
+  <div class="ticker" aria-hidden="true">
+    <div class="ticker-track" id="ticker-track">
+      <span>Bonus: the next 2 homeowners to complete the form get their closing costs covered — save thousands <i class="dot"></i></span>
+      <span>Free offer in about 10 minutes <i class="dot"></i></span>
+      <span>Call (281) 504-7854 — open 7 days a week <i class="dot"></i></span>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#top" aria-label="Added Value Investments — back to top">
+        <img src="assets/avi-logo.png" alt="Added Value Investments logo" width="520" height="67" />
+      </a>
+      <div style="display:flex; align-items:center; gap:0.8rem;">
+        <a class="call-chip" href="tel:2815047854" aria-label="Call Added Value Investments at 281-504-7854">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          <span class="num">(281) 504-7854</span><span class="num-alt">Call</span>
+        </a>
+        <a class="btn btn-gold btn-sm" href="#offer-form">Get My Offer</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- Hero -->
+    <section class="hero" id="top">
+      <div class="hero-bg" aria-hidden="true">
+        <img src="assets/houston-skyline-hero.jpg" alt="" width="1600" height="893" fetchpriority="high" decoding="async" />
+      </div>
+      <div class="container hero-inner">
+        <div>
+          <span class="eyebrow">Houston's as-is home buyer</span>
+          <h1>Your House. Our Problem. <em>Your Fresh Start.</em></h1>
+          <p class="hero-sub">Sell your house as-is. Skip the repairs. Move forward on your terms.</p>
+          <p class="hero-body">We help Houston-area homeowners with personal or property problems sell quickly and conveniently — no renovations, no listing process, just a straightforward cash offer and a closing date that work for you.</p>
+          <div class="hero-ctas">
+            <a class="btn btn-gold" href="#offer-form">Get My Offer</a>
+            <a class="btn btn-outline" href="tel:2815047854">
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              (281) 504-7854
+            </a>
+          </div>
+          <ul class="hero-trust">
+            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>No repairs or cleanup</li>
+            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>No agent fees</li>
+            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>No showings</li>
+            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Close on your date</li>
+          </ul>
+        </div>
+
+        <section class="offer-card" id="offer-form" aria-labelledby="form-title">
+          <h2 id="form-title">Get your free offer</h2>
+          <p>About 10 minutes. No obligation. Your info stays private.</p>
+          <form class="form-grid" id="lead-form" novalidate>
+            <label for="f-address">Property address *
+              <input id="f-address" name="property_address" type="text" placeholder="1234 Main St, Houston, TX" required autocomplete="street-address" />
+            </label>
+            <label for="f-name">Your name *
+              <input id="f-name" name="name" type="text" placeholder="First and last name" required autocomplete="name" />
+            </label>
+            <label for="f-phone">Phone *
+              <input id="f-phone" name="phone" type="tel" placeholder="(281) 555-0123" required autocomplete="tel" />
+            </label>
+            <label for="f-situation">What's going on with the property?
+              <select id="f-situation" name="situation">
+                <option value="">Choose one (optional)</option>
+                <option>Inherited property</option>
+                <option>Behind on taxes</option>
+                <option>Pre-foreclosure</option>
+                <option>Vacant property</option>
+                <option>Tired of being a landlord</option>
+                <option>Repairs too costly</option>
+                <option>Divorce</option>
+                <option>Job loss or relocation</option>
+                <option>Expired listing</option>
+                <option>Other</option>
+              </select>
+            </label>
+            <label for="f-details">Anything else we should know?
+              <textarea id="f-details" name="details" placeholder="Optional: timeline, tenants, condition, anything helpful"></textarea>
+            </label>
+            <button class="btn btn-gold" type="submit">Get My Offer</button>
+            <p class="form-note">By submitting, you agree to be contacted about your property inquiry. No spam, no pressure.</p>
+          </form>
+          <div class="form-success" id="form-success" role="status">
+            <div class="check">
+              <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+            </div>
+            <h3>Request received.</h3>
+            <p>Thanks — we're on it. Expect a call from (281) 504-7854 shortly. Prefer to talk now? <a href="tel:2815047854" style="color:var(--gold-bright); font-weight:600;">Call us</a> — we're open 7 days a week.</p>
+          </div>
+        </section>
+      </div>
+    </section>
+
+    <!-- Situations -->
+    <section class="section situations" id="situations">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Sound familiar?</span>
+          <h2>If your house has become <em>a problem,</em> you're exactly who we help.</h2>
+          <p>You don't need to fix anything, list anything, or wait on anyone. You need this handled — so you can move on. If any of these describe your situation, start with a free, no-pressure offer.</p>
+        </div>
+        <div class="chip-grid">
+          <div class="chip reveal"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M2 12h20"/></svg>Behind on property taxes</div>
+          <div class="chip reveal d1"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>Inherited a house you don't want</div>
+          <div class="chip reveal d2"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M5 21V7l7-4 7 4v14M9 21v-6h6v6"/></svg>Vacant property draining money</div>
+          <div class="chip reveal d3"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>Repairs piling up, no end in sight</div>
+          <div class="chip reveal"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 2v4M16 2v4M2 10h20M5 4h14l2 6v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-8z"/></svg>Tired landlord, done with tenants</div>
+          <div class="chip reveal d1"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 1v22M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>Need cash now</div>
+          <div class="chip reveal d2"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><path d="M12 9v4M12 17h.01"/></svg>Facing pre-foreclosure</div>
+          <div class="chip reveal d3"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>Divorce or family changes</div>
+          <div class="chip reveal"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>Job loss or relocating for work</div>
+          <div class="chip reveal d1"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>Listing expired, still need to sell</div>
+          <div class="chip reveal d2"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>Health issues making upkeep impossible</div>
+          <div class="chip reveal d3"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="M9 22V12h6v10"/></svg>The house is just a burden</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Statement -->
+    <section class="statement section" aria-label="Our promise">
+      <div class="container">
+        <p class="kicker reveal">What you walk away with</p>
+        <h2 id="statement-text" class="reveal d1">
+          <span class="fill">Leave the House.</span><br />
+          <span class="fill">Leave the Stress.</span><br />
+          <span class="fill">Move Forward.</span>
+        </h2>
+        <p class="outcome reveal d2">Sell your problem property with ease, relieve the weight you've been carrying, and walk away with cash in your pocket — free to enjoy what comes next.</p>
+      </div>
+    </section>
+
+    <!-- Benefits -->
+    <section class="section" id="benefits">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">What we provide</span>
+          <h2>Convenience, certainty, speed — <em>and money in your pocket.</em></h2>
+        </div>
+        <div class="grid-4">
+          <article class="card reveal">
+            <div class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="M9 22V12h6v10"/></svg></div>
+            <h3>Sell completely as-is</h3>
+            <p>No repairs, no cleaning, no staging. Leave anything you don't want — we handle the rest. The house sells in its current condition, period.</p>
+          </article>
+          <article class="card reveal d1">
+            <div class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z"/></svg></div>
+            <h3>Fast when you need it</h3>
+            <p>A free offer in about 10 minutes, and a closing date you choose — in as little as 5 days when speed matters, or later if you need more time.</p>
+          </article>
+          <article class="card reveal d2">
+            <div class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+            <h3>Certainty, no surprises</h3>
+            <p>Transparent numbers, explained plainly. The offer you accept is the offer you close on — no last-minute changes, no fee surprises at the table.</p>
+          </article>
+          <article class="card reveal d3">
+            <div class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></div>
+            <h3>Zero hassle for you</h3>
+            <p>No showings, no open houses, no agents, no paperwork headaches. One short form or one phone call starts everything — we do the work.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Steps -->
+    <section class="section" id="how-it-works" style="background: var(--navy-0); border-block: 1px solid rgba(244,241,234,0.06);">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">How it works</span>
+          <h2>Three steps between you and <em>moving on.</em></h2>
+        </div>
+        <div class="steps">
+          <article class="step reveal">
+            <h3>Tell us about the property</h3>
+            <p>Fill out the short form or call (281) 504-7854. It takes about 10 minutes to get your free, no-obligation offer — open 7 days a week.</p>
+          </article>
+          <article class="step reveal d1">
+            <h3>Get your transparent offer</h3>
+            <p>We do the homework on your property and your area, then explain the numbers in plain English. Ask anything. No pressure, ever.</p>
+          </article>
+          <article class="step reveal d2">
+            <h3>Close and get paid</h3>
+            <p>You pick the closing date — as soon as 5 days or whenever suits you. We handle the details. You walk away with cash and a clean start.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Bonus band -->
+    <section class="bonus" aria-label="Limited bonus offer">
+      <div class="container">
+        <h2 class="reveal">Complete the form now and we will pay all your closing costs.</h2>
+        <p class="reveal d1">Limited to the next 2 entries. This will save you thousands.</p>
+        <a class="btn reveal d2" href="#offer-form">Get My Offer</a>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="section" id="reviews">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Homeowners we've helped</span>
+          <h2>Fair, patient, and <em>transparent about everything.</em></h2>
+        </div>
+        <div class="quotes">
+          <figure class="quote reveal">
+            <div class="mark" aria-hidden="true">&ldquo;</div>
+            <blockquote>Matt was great to work with and made the process easy. He was fair and transparent about everything.</blockquote>
+            <footer>Keith L.</footer>
+          </figure>
+          <figure class="quote reveal d1">
+            <div class="mark" aria-hidden="true">&ldquo;</div>
+            <blockquote>Matt was kind and patient with me and my difficult situation. He and his team went above and beyond to get us paid fast.</blockquote>
+            <footer>Angela & Brandon J.</footer>
+          </figure>
+          <figure class="quote reveal d2">
+            <div class="mark" aria-hidden="true">&ldquo;</div>
+            <blockquote>I worked with Matt because he didn't rush me and he stayed in contact for over a year until I was ready to sell.</blockquote>
+            <footer>Stephanie M.</footer>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why AVI -->
+    <section class="section" id="why-avi">
+      <div class="container why-grid">
+        <aside class="why-photo reveal">
+          <img src="assets/houston-home-exterior.jpg" alt="Brick ranch-style home in a Houston-area neighborhood" width="1400" height="1045" loading="lazy" decoding="async" />
+          <div class="tag"><strong>Local to Houston</strong>We know these streets, these neighborhoods, and these houses — because we buy them.</div>
+        </aside>
+        <div>
+          <div class="section-head reveal" style="margin-bottom:0;">
+            <span class="eyebrow">Why Added Value Investments</span>
+            <h2>A Houston buyer who <em>doesn't rush you.</em></h2>
+          </div>
+          <ul class="why-list">
+            <li class="reveal"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span><strong>Local, not a call center.</strong> You talk to the person actually buying your house — someone who knows Houston.</span></li>
+            <li class="reveal d1"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span><strong>Transparent numbers.</strong> We show you how we arrived at the offer and answer every question before you decide anything.</span></li>
+            <li class="reveal d2"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span><strong>Zero pressure.</strong> Some of our sellers took a year to say yes. We'd rather wait for your yes than rush you to a maybe.</span></li>
+            <li class="reveal d3"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span><strong>Your problem becomes ours.</strong> Repairs, cleanup, paperwork, timing — that's our job now, not yours.</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section" id="faq" style="background: var(--navy-0); border-block: 1px solid rgba(244,241,234,0.06);">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Straight answers</span>
+          <h2>Questions homeowners <em>ask us first.</em></h2>
+        </div>
+        <div class="faq reveal">
+          <details>
+            <summary>Do I need to make repairs or clean anything first?<span class="plus" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></summary>
+            <div class="answer"><div><p>No. We buy houses completely as-is. You can leave behind anything you don't want to take with you — no repairs, no cleanup, no prep.</p></div></div>
+          </details>
+          <details>
+            <summary>How fast can I get an offer?<span class="plus" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></summary>
+            <div class="answer"><div><p>About 10 minutes. Fill out the short form or call (281) 504-7854 and you'll have a free, no-obligation cash offer fast.</p></div></div>
+          </details>
+          <details>
+            <summary>How fast can I close?<span class="plus" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></summary>
+            <div class="answer"><div><p>You pick the closing date. In many cases we can close in as little as 5 days — or we can work on your timeline if you need more time.</p></div></div>
+          </details>
+          <details>
+            <summary>Are there fees or commissions?<span class="plus" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></summary>
+            <div class="answer"><div><p>No agent fees or commissions. And for the next 2 homeowners who complete the form, we cover all closing costs — saving you thousands.</p></div></div>
+          </details>
+          <details>
+            <summary>Am I obligated if I request an offer?<span class="plus" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></summary>
+            <div class="answer"><div><p>No. The offer is free and there's zero obligation. If it's not right for you, no hard feelings — we'll never pressure you.</p></div></div>
+          </details>
+          <details>
+            <summary>What if I'm not ready to sell yet?<span class="plus" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></summary>
+            <div class="answer"><div><p>That's completely fine. We're happy to answer questions and stay in touch until you're ready. No pressure, ever.</p></div></div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="final" id="contact">
+      <div class="container">
+        <span class="eyebrow reveal" style="justify-content:center;">Ready when you are</span>
+        <h2 class="reveal d1">Your house. Our problem. <em>Your fresh start.</em></h2>
+        <p class="reveal d2">Tell us about the property and get a free, no-obligation offer in about 10 minutes. No repairs, no fees, no pressure — just a fair number and a closing date that work for you.</p>
+        <div class="hero-ctas reveal d3">
+          <a class="btn btn-gold" href="#offer-form">Get My Offer</a>
+          <a class="btn btn-outline" href="tel:2815047854">Call (281) 504-7854</a>
+        </div>
+        <p class="phone-line reveal d4">Open 7 days a week &middot; Prefer email? <a href="mailto:webuyhousescash14@gmail.com" style="color:var(--gold-bright);">webuyhousescash14@gmail.com</a></p>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div>
+        <img class="logo-foot" src="assets/avi-logo.png" alt="Added Value Investments" width="520" height="67" />
+        <p>Added Value Investments helps Houston-area homeowners sell unwanted or burdensome properties as-is — no repairs, no listings, no hassle. We can solve your problem.</p>
+      </div>
+      <div>
+        <nav class="links" aria-label="Footer">
+          <a href="tel:2815047854">Call or text: (281) 504-7854</a>
+          <a href="mailto:webuyhousescash14@gmail.com">webuyhousescash14@gmail.com</a>
+          <a href="#offer-form">Get My Offer</a>
+          <span style="color:var(--ink-faint);">Serving the Greater Houston area</span>
+        </nav>
+      </div>
+    </div>
+    <div class="container">
+      <p class="disclaimer">Added Value Investments is a real estate investment company. We are not real estate agents and do not provide agency or brokerage services. We buy houses as-is for investment purposes. Bonus: closing-cost credit is limited to the next 2 qualifying form submissions — ask for details. Equal housing opportunity.</p>
+      <p class="disclaimer">&copy; 2026 Added Value Investments. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Sticky mobile CTA -->
+  <div class="sticky-cta" id="sticky-cta" aria-label="Quick actions">
+    <a class="btn btn-gold" href="#offer-form">Get My Offer</a>
+    <a class="btn btn-call" href="tel:2815047854" aria-label="Call 281-504-7854">
+      <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      </a>
+  </div>
+
+  <script>
+    // Duplicate ticker content for seamless loop
+    (function () {
+      var track = document.getElementById('ticker-track');
+      if (track) track.innerHTML += track.innerHTML;
+    })();
+
+    // Scroll reveals
+    (function () {
+      var els = document.querySelectorAll('.reveal');
+      if (!('IntersectionObserver' in window)) {
+        els.forEach(function (el) { el.classList.add('is-in'); });
+        return;
+      }
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) { entry.target.classList.add('is-in'); io.unobserve(entry.target); }
+        });
+      }, { threshold: 0.12, rootMargin: '0px 0px -6% 0px' });
+      els.forEach(function (el) { io.observe(el); });
+    })();
+
+    // Statement fill (reading-progress highlight)
+    (function () {
+      var fills = document.querySelectorAll('#statement-text .fill');
+      if (!fills.length || !('IntersectionObserver' in window)) return;
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            var i = Array.prototype.indexOf.call(fills, entry.target);
+            setTimeout(function () { entry.target.classList.add('on'); }, i * 350);
+            io.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.6 });
+      fills.forEach(function (el) { io.observe(el); });
+    })();
+
+    // Sticky mobile CTA appears only after the user scrolls past the form
+    (function () {
+      var bar = document.getElementById('sticky-cta');
+      var anchor = document.getElementById('offer-form');
+      if (!bar || !anchor) return;
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          var past = entry.boundingClientRect.bottom < 80;
+          bar.classList.toggle('is-visible', past);
+        });
+      }, { threshold: 0 });
+      io.observe(anchor);
+    })();
+
+    // FAQ: one open at a time
+    (function () {
+      var items = document.querySelectorAll('.faq details');
+      items.forEach(function (d) {
+        d.addEventListener('toggle', function () {
+          if (d.open) items.forEach(function (o) { if (o !== d) o.open = false; });
+        });
+      });
+    })();
+
+    // Lead form (demo — wire to CRM/webhook before publishing)
+    (function () {
+      var form = document.getElementById('lead-form');
+      var success = document.getElementById('form-success');
+      if (!form) return;
+      form.addEventListener('submit', function (event) {
+        event.preventDefault();
+        var required = form.querySelectorAll('[required]');
+        for (var i = 0; i < required.length; i++) {
+          if (!required[i].value.trim()) { required[i].focus(); return; }
+        }
+        form.style.display = 'none';
+        success.style.display = 'block';
+        success.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      });
+    })();
+  </script>
+</body>
+</html>
