@@ -505,7 +505,7 @@
             <label for="f-details">Anything else we should know?
               <textarea id="f-details" name="details" placeholder="Optional: timeline, tenants, condition, anything helpful"></textarea>
             </label>
-            <button class="btn btn-gold" type="submit">Get My Offer</button>
+            <button class="btn btn-gold" type="submit" id="lead-submit" disabled>Get My Offer</button>
             <p class="form-note">By submitting, you agree to be contacted about your property inquiry. No spam, no pressure.</p>
           </form>
           <div class="form-success" id="form-success" role="status">
@@ -819,6 +819,8 @@
       var form = document.getElementById('lead-form');
       var success = document.getElementById('form-success');
       if (!form) return;
+      var submitBtn = document.getElementById('lead-submit');
+      if (submitBtn) submitBtn.disabled = false;
       form.addEventListener('submit', function (event) {
         event.preventDefault();
         var required = form.querySelectorAll('[required]');
