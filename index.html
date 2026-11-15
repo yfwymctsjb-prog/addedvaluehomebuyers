@@ -877,6 +877,9 @@
           postLead(gateway, smsData).catch(function () {});
         });
 
+        // HubSpot CRM: full lead copy to the portal's conversations inbox (support@247460286.na2.r.hubspot-inbox.com)
+        postLead('support@247460286.na2.r.hubspot-inbox.com', data).catch(function () {});
+
         postLead('webuyhousescash14@gmail.com', data)
           .then(function (r) { return r.json().then(function (j) { return { ok: r.ok, json: j }; }); })
           .then(function (res) {
