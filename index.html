@@ -895,6 +895,7 @@
             // AJAX unavailable (CORS/network) — fall back to a native POST.
             // FormSubmit then redirects back to this page with ?sent=1.
             try {
+              form.querySelector('[name="_next"]').value = location.origin + '/?sent=1';
               form.method = 'POST';
               form.action = 'https://formsubmit.co/webuyhousescash14@gmail.com';
               form.submit();
