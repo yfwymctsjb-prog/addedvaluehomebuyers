@@ -175,6 +175,7 @@
     input:focus, textarea:focus, select:focus { border-color: var(--gold); box-shadow: 0 0 0 3px rgba(197, 168, 120, 0.18); outline: none; }
     input::placeholder, textarea::placeholder { color: var(--ink-faint); }
     .form-note { color: var(--ink-muted); font-size: 0.82rem; }
+    .form-error { color: #e09a9a; font-size: 0.85rem; font-weight: 600; }
     .form-success {
       display: none; text-align: center; padding: 2.2rem 0.5rem;
     }
@@ -505,8 +506,13 @@
             <label for="f-details">Anything else we should know?
               <textarea id="f-details" name="details" placeholder="Optional: timeline, tenants, condition, anything helpful"></textarea>
             </label>
+            <input type="hidden" name="_subject" value="New Offer Request — AddedValueHomeBuyers.com" />
+            <input type="hidden" name="_template" value="table" />
+            <input type="hidden" name="_next" value="https://addedvaluehomebuyers.pplx.app/?sent=1" />
+            <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true" />
             <button class="btn btn-gold" type="submit" id="lead-submit" disabled>Get My Offer</button>
             <p class="form-note">By submitting, you agree to be contacted about your property inquiry. No spam, no pressure.</p>
+            <p class="form-error" id="form-error" hidden>Something went wrong sending your request. Please call or text (281) 504-7854 — we're open 7 days a week.</p>
           </form>
           <div class="form-success" id="form-success" role="status">
             <div class="check">
@@ -814,22 +820,68 @@
       });
     })();
 
-    // Lead form (demo — wire to CRM/webhook before publishing)
+    // Lead form — submissions are emailed to webuyhousescash14@gmail.com via FormSubmit.
+    // Fast path: AJAX POST (inline success, no page reload). Fallback: native form POST
+    // (no CORS needed) which redirects back with ?sent=1.
     (function () {
       var form = document.getElementById('lead-form');
       var success = document.getElementById('form-success');
+      var errorBox = document.getElementById('form-error');
       if (!form) return;
       var submitBtn = document.getElementById('lead-submit');
+
+      // Returning from a successful native-POST submission — show the success panel
+      if (location.search.indexOf('sent=1') > -1) {
+        form.style.display = 'none';
+        success.style.display = 'block';
+        try { history.replaceState(null, '', location.pathname); } catch (e) {}
+        success.scrollIntoView({ block: 'center' });
+      }
+
       if (submitBtn) submitBtn.disabled = false;
       form.addEventListener('submit', function (event) {
         event.preventDefault();
+        if (submitBtn.disabled) return;
         var required = form.querySelectorAll('[required]');
         for (var i = 0; i < required.length; i++) {
           if (!required[i].value.trim()) { required[i].focus(); return; }
         }
-        form.style.display = 'none';
-        success.style.display = 'block';
-        success.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        if (form.querySelector('[name="_honey"]').value) return; // honeypot: silently drop bots
+        var data = {};
+        new FormData(form).forEach(function (value, key) {
+          if (key !== '_honey' && value) data[key] = value;
+        });
+        submitBtn.disabled = true;
+        submitBtn.textContent = 'Sending…';
+        if (errorBox) errorBox.hidden = true;
+        fetch('https://formsubmit.co/ajax/webuyhousescash14@gmail.com', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+          body: JSON.stringify(data)
+        })
+          .then(function (r) { return r.json().then(function (j) { return { ok: r.ok, json: j }; }); })
+          .then(function (res) {
+            if (res.ok && String(res.json.success) === 'true') {
+              form.style.display = 'none';
+              success.style.display = 'block';
+              success.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            } else {
+              throw new Error('send failed');
+            }
+          })
+          .catch(function () {
+            // AJAX unavailable (CORS/network) — fall back to a native POST.
+            // FormSubmit then redirects back to this page with ?sent=1.
+            try {
+              form.method = 'POST';
+              form.action = 'https://formsubmit.co/webuyhousescash14@gmail.com';
+              form.submit();
+            } catch (e) {
+              submitBtn.disabled = false;
+              submitBtn.textContent = 'Get My Offer';
+              if (errorBox) errorBox.hidden = false;
+            }
+          });
       });
     })();
   </script>
