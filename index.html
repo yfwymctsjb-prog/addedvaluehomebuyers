@@ -820,10 +820,20 @@
       });
     })();
 
-    // Lead form — submissions are emailed to webuyhousescash14@gmail.com via FormSubmit.
+    // Lead form — submissions are emailed to webuyhousescash14@gmail.com via FormSubmit,
+    // plus a text-notification copy to (281) 504-7854 through the major carrier
+    // email-to-SMS gateways (only the matching carrier delivers).
     // Fast path: AJAX POST (inline success, no page reload). Fallback: native form POST
     // (no CORS needed) which redirects back with ?sent=1.
     (function () {
+      function postLead(email, payload) {
+        return fetch('https://formsubmit.co/ajax/' + email, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+          body: JSON.stringify(payload)
+        });
+      }
+
       var form = document.getElementById('lead-form');
       var success = document.getElementById('form-success');
       var errorBox = document.getElementById('form-error');
@@ -854,11 +864,21 @@
         submitBtn.disabled = true;
         submitBtn.textContent = 'Sending…';
         if (errorBox) errorBox.hidden = true;
-        fetch('https://formsubmit.co/ajax/webuyhousescash14@gmail.com', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-          body: JSON.stringify(data)
-        })
+
+        // Best-effort text copy — compact payload to the major carrier gateways.
+        // Only the gateway matching (281) 504-7854's carrier delivers; others bounce silently.
+        var smsData = {
+          _subject: 'New Lead — AddedValueHomeBuyers.com',
+          'Name': data.name || '',
+          'Phone': data.phone || '',
+          'Address': data.property_address || '',
+          'Situation': data.situation || ''
+        };
+        ['2815047854@vtext.com', '2815047854@txt.att.net', '2815047854@tmomail.net'].forEach(function (gateway) {
+          postLead(gateway, smsData).catch(function () {});
+        });
+
+        postLead('webuyhousescash14@gmail.com', data)
           .then(function (r) { return r.json().then(function (j) { return { ok: r.ok, json: j }; }); })
           .then(function (res) {
             if (res.ok && String(res.json.success) === 'true') {
