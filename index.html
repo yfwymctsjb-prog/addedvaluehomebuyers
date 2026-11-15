@@ -795,6 +795,8 @@
         <nav class="links" aria-label="Footer">
           <a href="tel:2815047854">Call or text: (281) 504-7854</a>
           <a href="#offer-form">Get My Offer</a>
+          <a href="./sms-terms.html">Internal SMS Terms</a>
+          <a href="./sms-privacy.html">Internal SMS Privacy</a>
           <span style="color:var(--ink-faint);">Serving the Greater Houston area</span>
         </nav>
       </div>
@@ -858,7 +860,7 @@
       if (!bar || !anchor) return;
       var io = new IntersectionObserver(function (entries) {
         entries.forEach(function (entry) {
-          var past = entry.boundingClientRect.bottom < 80;
+          var past = !entry.isIntersecting && entry.boundingClientRect.bottom < 80;
           bar.classList.toggle('is-visible', past);
         });
       }, { threshold: 0 });
