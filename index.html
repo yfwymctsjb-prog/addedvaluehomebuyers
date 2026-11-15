@@ -125,7 +125,7 @@
         linear-gradient(180deg, rgba(8, 12, 21, 0.86) 0%, rgba(11, 18, 32, 0.78) 45%, var(--navy-1) 100%),
         radial-gradient(ellipse at 70% 20%, rgba(197, 168, 120, 0.12), transparent 55%);
     }
-    .hero-inner { display: grid; gap: 3rem; padding: 4.5rem 0 5.5rem; align-items: center; }
+    .hero-inner { display: grid; gap: 3rem; padding: 4.5rem 0 5.5rem; align-items: start; }
     .eyebrow {
       display: inline-flex; align-items: center; gap: 0.6rem;
       color: var(--gold-bright); font-size: 0.82rem; font-weight: 700;
@@ -175,6 +175,20 @@
     input:focus, textarea:focus, select:focus { border-color: var(--gold); box-shadow: 0 0 0 3px rgba(197, 168, 120, 0.18); outline: none; }
     input::placeholder, textarea::placeholder { color: var(--ink-faint); }
     .form-note { color: var(--ink-muted); font-size: 0.82rem; }
+    .condition-field { min-width: 0; border: 0; padding: 0; margin: 0; }
+    .condition-field legend { font-size: 0.9rem; font-weight: 600; margin-bottom: 0.4rem; }
+    .field-hint { color: var(--ink-muted); font-size: 0.82rem; margin-bottom: 0.7rem; }
+    .condition-options { display: grid; gap: 0.6rem; }
+    .condition-option {
+      display: grid; grid-template-columns: 1.1rem minmax(0, 1fr); gap: 0.7rem;
+      align-items: start; padding: 0.85rem; border-radius: var(--radius-md);
+      border: 1px solid rgba(169, 176, 190, 0.22); background: var(--navy-1);
+      cursor: pointer; font-weight: 400; line-height: 1.5;
+    }
+    .condition-option:has(input:checked) { border-color: var(--gold); background: rgba(197, 168, 120, 0.09); }
+    .condition-option input { width: 1.1rem; height: 1.1rem; min-height: 0; padding: 0; margin: 0.2rem 0 0; accent-color: var(--gold); }
+    .condition-option strong { display: block; font-weight: 600; }
+    .condition-option .repair-description { display: block; color: var(--ink-muted); font-size: 0.82rem; margin-top: 0.15rem; }
     .form-error { color: #e09a9a; font-size: 0.85rem; font-weight: 600; }
     .form-success {
       display: none; text-align: center; padding: 2.2rem 0.5rem;
@@ -380,7 +394,10 @@
       .sticky-cta { display: grid; }
     }
     @media (max-width: 560px) {
-      .brand img { height: 2.1rem; }
+      .header-inner { gap: 0.6rem; }
+      .brand img { height: auto; width: clamp(7rem, 33vw, 10rem); }
+      .header-inner .call-chip { display: none; }
+      .header-inner .btn { white-space: nowrap; }
       .offer-card { padding: 1.5rem; }
       .hero-ctas .btn { width: 100%; }
     }
@@ -462,10 +479,6 @@
           <p class="hero-body">We help Houston-area homeowners with personal or property problems sell quickly and conveniently — no renovations, no listing process, just a straightforward cash offer and a closing date that work for you.</p>
           <div class="hero-ctas">
             <a class="btn btn-gold" href="#offer-form">Get My Offer</a>
-            <a class="btn btn-outline" href="tel:2815047854">
-              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-              (281) 504-7854
-            </a>
           </div>
           <ul class="hero-trust">
             <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>No repairs or cleanup</li>
@@ -487,6 +500,48 @@
             </label>
             <label for="f-phone">Phone *
               <input id="f-phone" name="phone" type="tel" placeholder="(281) 555-0123" required autocomplete="tel" />
+            </label>
+            <label for="f-price">Asking price
+              <input id="f-price" name="asking_price" type="text" inputmode="numeric" pattern="[0-9]+" placeholder="e.g. 250000" aria-describedby="price-hint" />
+              <span class="form-note" id="price-hint">In dollars. Numbers only.</span>
+            </label>
+            <label for="f-timeline">When are you looking to sell?
+              <select id="f-timeline" name="selling_timeline">
+                <option value="">Choose one</option>
+                <option>ASAP</option>
+                <option>1-3 months</option>
+                <option>3-6 months</option>
+                <option>6 months plus</option>
+              </select>
+            </label>
+            <fieldset class="condition-field" aria-describedby="condition-hint">
+              <legend>Condition</legend>
+              <p class="field-hint" id="condition-hint">Compared to a new build home. Select one.</p>
+              <div class="condition-options">
+                <label class="condition-option">
+                  <input type="radio" name="condition" value="No repairs needed (2026 new build quality)" />
+                  <span><strong>No repairs needed</strong><span class="repair-description">2026 new build quality</span></span>
+                </label>
+                <label class="condition-option">
+                  <input type="radio" name="condition" value="Cosmetic repairs needed (paint, and flooring, fixtures)" />
+                  <span><strong>Cosmetic repairs needed</strong><span class="repair-description">Paint, flooring, fixtures</span></span>
+                </label>
+                <label class="condition-option">
+                  <input type="radio" name="condition" value="Moderate repairs needed (upgrade the kitchen and bathrooms, update flooring, update water heater, etc.)" />
+                  <span><strong>Moderate repairs needed</strong><span class="repair-description">Upgrade the kitchen and bathrooms, update flooring, update water heater, etc.</span></span>
+                </label>
+                <label class="condition-option">
+                  <input type="radio" name="condition" value="Heavy repairs needed (needs things like a new roof, foundation repair, hvac, plumbing, electrical, or houses older than 1980)" />
+                  <span><strong>Heavy repairs needed</strong><span class="repair-description">Needs things like a new roof, foundation repair, HVAC, plumbing, electrical, or houses older than 1980</span></span>
+                </label>
+              </div>
+            </fieldset>
+            <label for="f-flooded">Ever flooded?
+              <select id="f-flooded" name="ever_flooded">
+                <option value="">Choose one</option>
+                <option>Yes</option>
+                <option>No</option>
+              </select>
             </label>
             <label for="f-situation">What's going on with the property?
               <select id="f-situation" name="situation">
@@ -721,9 +776,7 @@
         <p class="reveal d2">Tell us about the property and get a free, no-obligation offer in about 10 minutes. No repairs, no fees, no pressure — just a fair number and a closing date that work for you.</p>
         <div class="hero-ctas reveal d3">
           <a class="btn btn-gold" href="#offer-form">Get My Offer</a>
-          <a class="btn btn-outline" href="tel:2815047854">Call (281) 504-7854</a>
         </div>
-        <p class="phone-line reveal d4">Open 7 days a week &middot; Call or text anytime: <a href="tel:2815047854" style="color:var(--gold-bright);">(281) 504-7854</a></p>
       </div>
     </section>
   </main>
@@ -838,6 +891,11 @@
       var errorBox = document.getElementById('form-error');
       if (!form) return;
       var submitBtn = document.getElementById('lead-submit');
+      var askingPrice = document.getElementById('f-price');
+      function sanitizePrice() {
+        if (askingPrice) askingPrice.value = askingPrice.value.replace(/[^0-9]/g, '');
+      }
+      if (askingPrice) askingPrice.addEventListener('input', sanitizePrice);
 
       // Returning from a successful native-POST submission — show the success panel
       if (location.search.indexOf('sent=1') > -1) {
@@ -851,6 +909,7 @@
       form.addEventListener('submit', function (event) {
         event.preventDefault();
         if (submitBtn.disabled) return;
+        sanitizePrice();
         var required = form.querySelectorAll('[required]');
         for (var i = 0; i < required.length; i++) {
           if (!required[i].value.trim()) { required[i].focus(); return; }
@@ -871,6 +930,10 @@
           'Name': data.name || '',
           'Phone': data.phone || '',
           'Address': data.property_address || '',
+          'Asking price': data.asking_price || '',
+          'Selling timeline': data.selling_timeline || '',
+          'Condition': data.condition || '',
+          'Ever flooded': data.ever_flooded || '',
           'Situation': data.situation || ''
         };
         ['2815047854@vtext.com', '2815047854@txt.att.net', '2815047854@tmomail.net'].forEach(function (gateway) {
