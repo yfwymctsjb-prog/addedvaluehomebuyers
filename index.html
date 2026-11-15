@@ -501,8 +501,11 @@
             <label for="f-phone">Phone *
               <input id="f-phone" name="phone" type="tel" placeholder="(281) 555-0123" required autocomplete="tel" />
             </label>
-            <label for="f-price">Asking price
-              <input id="f-price" name="asking_price" type="text" inputmode="numeric" pattern="[0-9]+" placeholder="e.g. 250000" aria-describedby="price-hint" />
+            <label for="f-email">Email *
+              <input id="f-email" name="email" type="email" placeholder="you@example.com" required autocomplete="email" />
+            </label>
+            <label for="f-price">Asking price *
+              <input id="f-price" name="asking_price" type="text" inputmode="numeric" pattern="[0-9]+" placeholder="e.g. 250000" aria-describedby="price-hint" required />
               <span class="form-note" id="price-hint">In dollars. Numbers only.</span>
             </label>
             <label for="f-timeline">When are you looking to sell?
@@ -515,23 +518,23 @@
               </select>
             </label>
             <fieldset class="condition-field" aria-describedby="condition-hint">
-              <legend>Condition</legend>
+              <legend>Condition *</legend>
               <p class="field-hint" id="condition-hint">Compared to a new build home. Select one.</p>
               <div class="condition-options">
                 <label class="condition-option">
-                  <input type="radio" name="condition" value="No repairs needed (2026 new build quality)" />
+                  <input type="radio" name="condition" value="No repairs needed (2026 new build quality)" required />
                   <span><strong>No repairs needed</strong><span class="repair-description">2026 new build quality</span></span>
                 </label>
                 <label class="condition-option">
-                  <input type="radio" name="condition" value="Cosmetic repairs needed (paint, and flooring, fixtures)" />
+                  <input type="radio" name="condition" value="Cosmetic repairs needed (paint, and flooring, fixtures)" required />
                   <span><strong>Cosmetic repairs needed</strong><span class="repair-description">Paint, flooring, fixtures</span></span>
                 </label>
                 <label class="condition-option">
-                  <input type="radio" name="condition" value="Moderate repairs needed (upgrade the kitchen and bathrooms, update flooring, update water heater, etc.)" />
+                  <input type="radio" name="condition" value="Moderate repairs needed (upgrade the kitchen and bathrooms, update flooring, update water heater, etc.)" required />
                   <span><strong>Moderate repairs needed</strong><span class="repair-description">Upgrade the kitchen and bathrooms, update flooring, update water heater, etc.</span></span>
                 </label>
                 <label class="condition-option">
-                  <input type="radio" name="condition" value="Heavy repairs needed (needs things like a new roof, foundation repair, hvac, plumbing, electrical, or houses older than 1980)" />
+                  <input type="radio" name="condition" value="Heavy repairs needed (needs things like a new roof, foundation repair, hvac, plumbing, electrical, or houses older than 1980)" required />
                   <span><strong>Heavy repairs needed</strong><span class="repair-description">Needs things like a new roof, foundation repair, HVAC, plumbing, electrical, or houses older than 1980</span></span>
                 </label>
               </div>
@@ -910,10 +913,13 @@
         event.preventDefault();
         if (submitBtn.disabled) return;
         sanitizePrice();
-        var required = form.querySelectorAll('[required]');
+        var required = form.querySelectorAll('input[required]:not([type="radio"])');
         for (var i = 0; i < required.length; i++) {
-          if (!required[i].value.trim()) { required[i].focus(); return; }
+          if (!required[i].value.trim()) required[i].value = '';
         }
+        // Native validity checks the radio group as a whole, not each radio's value.
+        // It also focuses and explains the first missing required answer.
+        if (!form.reportValidity()) return;
         if (form.querySelector('[name="_honey"]').value) return; // honeypot: silently drop bots
         var data = {};
         new FormData(form).forEach(function (value, key) {
@@ -929,6 +935,7 @@
           _subject: 'New Lead — AddedValueHomeBuyers.com',
           'Name': data.name || '',
           'Phone': data.phone || '',
+          'Email': data.email || '',
           'Address': data.property_address || '',
           'Asking price': data.asking_price || '',
           'Selling timeline': data.selling_timeline || '',
